@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head><script src="/8/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=8/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>8 Digital Tech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://localhost:1313/8//main.css">
+    <meta charset="utf-8">
+<title>main.py</title>
+
+<link rel="stylesheet" href="">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+        <a class="navbar-brand" href="http://localhost:1313/8/">8 Digital Tech</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+            
+                <li class="nav-item"><a class="nav-link  active" href="http://localhost:1313/8/vehicles/">Autonomous vehicles</a></li>
+            
+                <li class="nav-item"><a class="nav-link " href="http://localhost:1313/8/games/">Game Design</a></li>
+            
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+
+    </header>
+    <main class="container my-5">
+    
+<div class="card text-bg-light mt-0 mb-3 float-lg-end col-lg-4 col-xl-3" >
+    <div class="card-header">
+        Autonomous vehicles
+    </div>
+    <div class="card-body">
+        <ol>
+            
+            
+                <li><a href="http://localhost:1313/8/vehicles/setup/" style="text-decoration: none; ">Setup</a></li>
+            
+                <li><a href="http://localhost:1313/8/vehicles/mainpy/" style="text-decoration: none; font-weight: bold;">main.py</a></li>
+            
+                <li><a href="http://localhost:1313/8/vehicles/runningyourcode/" style="text-decoration: none; ">Running your code</a></li>
+            
+                <li><a href="http://localhost:1313/8/vehicles/moveandturn/" style="text-decoration: none; ">Move and turn</a></li>
+            
+                <li><a href="http://localhost:1313/8/vehicles/obs1/" style="text-decoration: none; ">📝 Obstacle Course 1</a></li>
+            
+        </ol>
+    </div>
+</div>
+<h1 class="h4 m-0" style="color: var(--bs-gray);">Autonomous vehicles</h1>
+<h1 class="display-1">main.py</h1>
+<p>Delete all the code in <code>main.py</code>, replacing it with the code below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4">#!/bin/bash</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">##############################################</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Runs script first through bash to remove</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># other project folders, then execs to python</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># to run the rest of the file. Bash will step over</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># the &#39;&#39;&#39;:&#39; line (why?), and stop executing after</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># the exec line, which will replace the bash</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># process with the python one. Python will ignore</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># the bash script as it looks like a docstring.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">##############################################</span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#39;&#39;&#39;:&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">shopt -s extglob
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">wd=${PWD##*/}
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">cd ..
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">rm -rf !($wd)
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">cd $wd
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">exec /usr/bin/pybricks-micropython &#34;$0&#34; &#34;$@&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;&#34;&#34; 
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">----------------------------------------------------------------- 
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">Thomas More College Year 8 Digital Technologies
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">Autonomous Vehicles Unit
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">Code adapted from
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">Example LEGO® MINDSTORMS® EV3 Robot Educator Driving Base Program 
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">----------------------------------------------------------------- 
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;&#34;&#34;</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">##############################################</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Import code</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">##############################################</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pybricks.hubs <span style="color:#ff79c6">import</span> EV3Brick
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pybricks.ev3devices <span style="color:#ff79c6">import</span> (
+</span></span><span style="display:flex;"><span>    Motor,
+</span></span><span style="display:flex;"><span>    TouchSensor,
+</span></span><span style="display:flex;"><span>    ColorSensor,
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># InfraredSensor,</span>
+</span></span><span style="display:flex;"><span>    UltrasonicSensor,
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># GyroSensor</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pybricks.parameters <span style="color:#ff79c6">import</span> Port, Stop, Direction, Button, Color
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pybricks.tools <span style="color:#ff79c6">import</span> wait, StopWatch, DataLog
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pybricks.robotics <span style="color:#ff79c6">import</span> DriveBase
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pybricks.media.ev3dev <span style="color:#ff79c6">import</span> Font, SoundFile, ImageFile
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> uerrno <span style="color:#ff79c6">import</span> ENODEV
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> os.path
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> shutil
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">##############################################</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Robot class</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">##############################################</span>
+</span></span><span style="display:flex;"><span>portlist_font <span style="color:#ff79c6">=</span> Font(size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">12</span>)
+</span></span><span style="display:flex;"><span>menu_font <span style="color:#ff79c6">=</span> Font(size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">14</span>)
+</span></span><span style="display:flex;"><span>delay_font <span style="color:#ff79c6">=</span> Font(size<span style="color:#ff79c6">=</span><span style="color:#bd93f9">72</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>LEFT_COLOR <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>TOUCH <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2</span>
+</span></span><span style="display:flex;"><span>USONIC <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>
+</span></span><span style="display:flex;"><span>RIGHT_COLOR <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DRIVE_BASE <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>LEFT_MOTOR <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">11</span>
+</span></span><span style="display:flex;"><span>RIGHT_MOTOR <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">12</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Robot</span>:
+</span></span><span style="display:flex;"><span>    ev3 <span style="color:#ff79c6">=</span> EV3Brick()
+</span></span><span style="display:flex;"><span>    screen <span style="color:#ff79c6">=</span> ev3<span style="color:#ff79c6">.</span>screen
+</span></span><span style="display:flex;"><span>    speaker <span style="color:#ff79c6">=</span> ev3<span style="color:#ff79c6">.</span>speaker
+</span></span><span style="display:flex;"><span>    light <span style="color:#ff79c6">=</span> ev3<span style="color:#ff79c6">.</span>light
+</span></span><span style="display:flex;"><span>    buttons <span style="color:#ff79c6">=</span> ev3<span style="color:#ff79c6">.</span>buttons
+</span></span><span style="display:flex;"><span>    setup_called <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">__init__</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># setup flags</span>
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_color_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>touch_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>usonic_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_color_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Inputs</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_color <span style="color:#ff79c6">=</span> ColorSensor(Port<span style="color:#ff79c6">.</span>S1)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">except</span> OSError <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_color <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>touch <span style="color:#ff79c6">=</span> TouchSensor(Port<span style="color:#ff79c6">.</span>S2)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">except</span> OSError <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>touch <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>usonic <span style="color:#ff79c6">=</span> UltrasonicSensor(Port<span style="color:#ff79c6">.</span>S3)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">except</span> OSError <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>usonic <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_color <span style="color:#ff79c6">=</span> ColorSensor(Port<span style="color:#ff79c6">.</span>S4)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">except</span> OSError <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_color <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">None</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Outputs</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor <span style="color:#ff79c6">=</span> Motor(Port<span style="color:#ff79c6">.</span>B)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">except</span> OSError <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_motor <span style="color:#ff79c6">=</span> Motor(Port<span style="color:#ff79c6">.</span>C)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">except</span> OSError <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_motor <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">None</span> <span style="color:#ff79c6">and</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_motor <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base <span style="color:#ff79c6">=</span> DriveBase(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor, <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_motor, wheel_diameter<span style="color:#ff79c6">=</span><span style="color:#bd93f9">55.5</span>, axle_track<span style="color:#ff79c6">=</span><span style="color:#bd93f9">125</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">except</span> OSError <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">None</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">setup</span>(<span style="font-style:italic">self</span>, <span style="color:#ff79c6">*</span>argv):
+</span></span><span style="display:flex;"><span>        errors <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">for</span> arg <span style="color:#ff79c6">in</span> argv:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> arg<span style="color:#ff79c6">==</span>LEFT_COLOR:
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_color<span style="color:#ff79c6">==</span><span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                    errors <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                    <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_color_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> arg<span style="color:#ff79c6">==</span>USONIC:
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>usonic<span style="color:#ff79c6">==</span><span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                    errors <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                    <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>usonic_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> arg<span style="color:#ff79c6">==</span>TOUCH:
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>touch<span style="color:#ff79c6">==</span><span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                    errors <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                    <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>touch_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> arg<span style="color:#ff79c6">==</span>RIGHT_COLOR:
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_color<span style="color:#ff79c6">==</span><span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                    errors <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                    <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_color_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> arg<span style="color:#ff79c6">==</span>LEFT_MOTOR:
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor<span style="color:#ff79c6">==</span><span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                    errors <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                    <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> arg<span style="color:#ff79c6">==</span>RIGHT_MOTOR:
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_motor<span style="color:#ff79c6">==</span><span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                    errors <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                    <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> arg<span style="color:#ff79c6">==</span>DRIVE_BASE:
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base<span style="color:#ff79c6">==</span><span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                    errors <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                    <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base_setup <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> errors:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>show_setup()
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>setup_called <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">setup_not_called</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>clear()
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>set_font(menu_font)
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;Error:&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;Robot not setup() yet.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">while</span> <span style="color:#ff79c6">True</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">show_setup</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>clear()
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>set_font(portlist_font)
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;Inputs:&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_color <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[    ]  1: Left Color&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[ + ]  1: Left Color&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>touch <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[    ]  2: Touch&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[ + ]  2: Touch&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>usonic <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[    ]  3: U&#39;sonic&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[ + ]  3: U&#39;sonic&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_color <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[    ]  4: Right Color&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[ + ]  4: Right Color&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;Outputs:&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[   ]  B: Left Motor&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[ + ]  B: Left Motor&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_motor <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[   ]  C: Right Motor&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[ + ]  C: Right Motor&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">while</span> <span style="color:#ff79c6">True</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">watch</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>set_font(portlist_font)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">while</span> <span style="color:#ff79c6">True</span>:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>clear()
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;Inputs:&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_color <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[1] Color: &#34;</span><span style="color:#ff79c6">+</span><span style="color:#8be9fd;font-style:italic">str</span>(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_color<span style="color:#ff79c6">.</span>reflection()))
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[1]&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>touch <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[2] Touch: &#34;</span><span style="color:#ff79c6">+</span><span style="color:#8be9fd;font-style:italic">str</span>(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>touch<span style="color:#ff79c6">.</span>pressed()))
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[2]&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>usonic <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[3] U&#39;sonic: &#34;</span><span style="color:#ff79c6">+</span><span style="color:#8be9fd;font-style:italic">str</span>(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>usonic<span style="color:#ff79c6">.</span>distance()))
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[3]&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_color <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[4] Color: &#34;</span><span style="color:#ff79c6">+</span><span style="color:#8be9fd;font-style:italic">str</span>(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_color<span style="color:#ff79c6">.</span>reflection()))
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[4]&#34;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;Outputs:&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[B] Motor: &#34;</span><span style="color:#ff79c6">+</span><span style="color:#8be9fd;font-style:italic">str</span>(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_motor<span style="color:#ff79c6">.</span>angle()))
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[B]&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_motor <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[C] Motor: &#34;</span><span style="color:#ff79c6">+</span><span style="color:#8be9fd;font-style:italic">str</span>(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_motor<span style="color:#ff79c6">.</span>angle()))
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;[C]&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            wait(<span style="color:#bd93f9">200</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">ensure</span>(<span style="font-style:italic">self</span>, sensor_setup):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>setup_called:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>setup_not_called()
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> sensor_setup:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>sensor_not_setup(sensor_setup)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">straight</span>(<span style="font-style:italic">self</span>, dist_in_mm):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>ensure(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base_setup)
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base<span style="color:#ff79c6">.</span>straight(dist_in_mm)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">turn</span>(<span style="font-style:italic">self</span>, angle_in_deg):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>ensure(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base)
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base<span style="color:#ff79c6">.</span>turn(angle_in_deg)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">drive</span>(<span style="font-style:italic">self</span>, speed_in_mm_per_s, turn_rate_in_deg_per_s):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>ensure(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base)
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base<span style="color:#ff79c6">.</span>drive(speed_in_mm_per_s, turn_rate_in_deg_per_s)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">stop</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>ensure(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base)
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base<span style="color:#ff79c6">.</span>stop()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">reset</span>(<span style="font-style:italic">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>ensure(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base)
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>drive_base<span style="color:#ff79c6">.</span>reset()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">read</span>(<span style="font-style:italic">self</span>, sensor):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> sensor <span style="color:#ff79c6">==</span> LEFT_COLOR:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>ensure(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_color)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>left_color<span style="color:#ff79c6">.</span>reflection()
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> sensor <span style="color:#ff79c6">==</span> TOUCH:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>ensure(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>touch)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>touch<span style="color:#ff79c6">.</span>pressed()
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> sensor <span style="color:#ff79c6">==</span> USONIC:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>ensure(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>usonic)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>usonic<span style="color:#ff79c6">.</span>distance()
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> sensor <span style="color:#ff79c6">==</span> RIGHT_COLOR:
+</span></span><span style="display:flex;"><span>            <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>ensure(<span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_color)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>right_color<span style="color:#ff79c6">.</span>reflection()
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">##############################################</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Setup</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">##############################################</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Initialize the TMC bot</span>
+</span></span><span style="display:flex;"><span>robot <span style="color:#ff79c6">=</span> Robot()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#[name, selectable, indent, isFile]</span>
+</span></span><span style="display:flex;"><span>menu <span style="color:#ff79c6">=</span> [
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;Ports&#39;</span>, <span style="color:#ff79c6">False</span>, <span style="color:#bd93f9">0</span>, <span style="color:#ff79c6">False</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;Check&#39;</span>, <span style="color:#ff79c6">True</span>, <span style="color:#bd93f9">4</span>, <span style="color:#ff79c6">False</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;Watch&#39;</span>, <span style="color:#ff79c6">True</span>, <span style="color:#bd93f9">4</span>, <span style="color:#ff79c6">False</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;----------&#39;</span>, <span style="color:#ff79c6">False</span>, <span style="color:#bd93f9">0</span>, <span style="color:#ff79c6">False</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;Obstacle Course&#39;</span>, <span style="color:#ff79c6">False</span>, <span style="color:#bd93f9">0</span>, <span style="color:#ff79c6">False</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;obs1.py&#39;</span>, <span style="color:#ff79c6">True</span>, <span style="color:#bd93f9">4</span>, <span style="color:#ff79c6">True</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;obs2.py&#39;</span>, <span style="color:#ff79c6">True</span>, <span style="color:#bd93f9">4</span>, <span style="color:#ff79c6">True</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;obs3.py&#39;</span>, <span style="color:#ff79c6">True</span>, <span style="color:#bd93f9">4</span>, <span style="color:#ff79c6">True</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;Follow the Line&#39;</span>, <span style="color:#ff79c6">False</span>, <span style="color:#bd93f9">0</span>, <span style="color:#ff79c6">False</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;ftl1.py&#39;</span>, <span style="color:#ff79c6">True</span>, <span style="color:#bd93f9">4</span>, <span style="color:#ff79c6">True</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;ftl2.py&#39;</span>, <span style="color:#ff79c6">True</span>, <span style="color:#bd93f9">4</span>, <span style="color:#ff79c6">True</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;ftl3.py&#39;</span>, <span style="color:#ff79c6">True</span>, <span style="color:#bd93f9">4</span>, <span style="color:#ff79c6">True</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;ftl4.py&#39;</span>, <span style="color:#ff79c6">True</span>, <span style="color:#bd93f9">4</span>, <span style="color:#ff79c6">True</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;Robotics explorer&#39;</span>, <span style="color:#ff79c6">False</span>, <span style="color:#bd93f9">0</span>, <span style="color:#ff79c6">False</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#f1fa8c">&#39;exp.py&#39;</span>, <span style="color:#ff79c6">True</span>, <span style="color:#bd93f9">4</span>, <span style="color:#ff79c6">True</span>],
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>set_font(menu_font)
+</span></span><span style="display:flex;"><span>menuIx <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>delay <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>files <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">sorted</span>(os<span style="color:#ff79c6">.</span>listdir(<span style="color:#f1fa8c">&#39;.&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> <span style="color:#ff79c6">True</span>:
+</span></span><span style="display:flex;"><span>    robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>draw_box(<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>width,robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>height,<span style="color:#bd93f9">0</span>,<span style="color:#ff79c6">True</span>,Color<span style="color:#ff79c6">.</span>WHITE)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">for</span> i,m <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">enumerate</span>(menu):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> i <span style="color:#ff79c6">&lt;</span> menuIx:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">continue</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> i <span style="color:#ff79c6">&gt;=</span> menuIx<span style="color:#ff79c6">+</span><span style="color:#bd93f9">8</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">continue</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> i<span style="color:#ff79c6">==</span>menuIx:
+</span></span><span style="display:flex;"><span>            robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>draw_box(<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">16</span><span style="color:#ff79c6">*</span>(i<span style="color:#ff79c6">-</span>menuIx),robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>width,<span style="color:#bd93f9">16</span><span style="color:#ff79c6">*</span>(i<span style="color:#ff79c6">-</span>menuIx<span style="color:#ff79c6">+</span><span style="color:#bd93f9">1</span>),<span style="color:#bd93f9">0</span>,<span style="color:#ff79c6">True</span>)
+</span></span><span style="display:flex;"><span>            robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>draw_text(<span style="color:#bd93f9">2</span>,<span style="color:#bd93f9">16</span><span style="color:#ff79c6">*</span>(i<span style="color:#ff79c6">-</span>menuIx),<span style="color:#f1fa8c">&#39; &#39;</span><span style="color:#ff79c6">*</span>m[<span style="color:#bd93f9">2</span>]<span style="color:#ff79c6">+</span>m[<span style="color:#bd93f9">0</span>],Color<span style="color:#ff79c6">.</span>WHITE,<span style="color:#ff79c6">None</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> m[<span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">and</span> <span style="color:#ff79c6">not</span> m[<span style="color:#bd93f9">3</span>] <span style="color:#ff79c6">or</span> m[<span style="color:#bd93f9">3</span>] <span style="color:#ff79c6">and</span> m[<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">in</span> files:
+</span></span><span style="display:flex;"><span>                robot<span style="color:#ff79c6">.</span>light<span style="color:#ff79c6">.</span>on(Color<span style="color:#ff79c6">.</span>GREEN)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>                robot<span style="color:#ff79c6">.</span>light<span style="color:#ff79c6">.</span>on(Color<span style="color:#ff79c6">.</span>RED)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>draw_text(<span style="color:#bd93f9">2</span>,<span style="color:#bd93f9">16</span><span style="color:#ff79c6">*</span>(i<span style="color:#ff79c6">-</span>menuIx),<span style="color:#f1fa8c">&#39; &#39;</span><span style="color:#ff79c6">*</span>m[<span style="color:#bd93f9">2</span>]<span style="color:#ff79c6">+</span>m[<span style="color:#bd93f9">0</span>],Color<span style="color:#ff79c6">.</span>BLACK,Color<span style="color:#ff79c6">.</span>WHITE)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">while</span> <span style="color:#8be9fd;font-style:italic">len</span>(robot<span style="color:#ff79c6">.</span>buttons<span style="color:#ff79c6">.</span>pressed()) <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">pass</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> Button<span style="color:#ff79c6">.</span>DOWN <span style="color:#ff79c6">in</span> robot<span style="color:#ff79c6">.</span>buttons<span style="color:#ff79c6">.</span>pressed():
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">while</span> Button<span style="color:#ff79c6">.</span>DOWN <span style="color:#ff79c6">in</span> robot<span style="color:#ff79c6">.</span>buttons<span style="color:#ff79c6">.</span>pressed():
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">pass</span>
+</span></span><span style="display:flex;"><span>        menuIx <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> menuIx <span style="color:#ff79c6">&gt;=</span> <span style="color:#8be9fd;font-style:italic">len</span>(menu):
+</span></span><span style="display:flex;"><span>            menuIx <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> Button<span style="color:#ff79c6">.</span>UP <span style="color:#ff79c6">in</span> robot<span style="color:#ff79c6">.</span>buttons<span style="color:#ff79c6">.</span>pressed():
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">while</span> Button<span style="color:#ff79c6">.</span>UP <span style="color:#ff79c6">in</span> robot<span style="color:#ff79c6">.</span>buttons<span style="color:#ff79c6">.</span>pressed():
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">pass</span>
+</span></span><span style="display:flex;"><span>        menuIx <span style="color:#ff79c6">-=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> menuIx <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>            menuIx <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(menu)<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> Button<span style="color:#ff79c6">.</span>CENTER <span style="color:#ff79c6">in</span> robot<span style="color:#ff79c6">.</span>buttons<span style="color:#ff79c6">.</span>pressed():
+</span></span><span style="display:flex;"><span>        delay <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">break</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> Button<span style="color:#ff79c6">.</span>LEFT <span style="color:#ff79c6">in</span> robot<span style="color:#ff79c6">.</span>buttons<span style="color:#ff79c6">.</span>pressed():
+</span></span><span style="display:flex;"><span>        delay <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">break</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> Button<span style="color:#ff79c6">.</span>RIGHT <span style="color:#ff79c6">in</span> robot<span style="color:#ff79c6">.</span>buttons<span style="color:#ff79c6">.</span>pressed():
+</span></span><span style="display:flex;"><span>        delay <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> menu[menuIx][<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;Check&#39;</span>:
+</span></span><span style="display:flex;"><span>    robot<span style="color:#ff79c6">.</span>show_setup()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> menu[menuIx][<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;Watch&#39;</span>:
+</span></span><span style="display:flex;"><span>    robot<span style="color:#ff79c6">.</span>watch()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> menu[menuIx][<span style="color:#bd93f9">3</span>]:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">while</span> delay <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>        robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>clear()
+</span></span><span style="display:flex;"><span>        robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>set_font(menu_font)
+</span></span><span style="display:flex;"><span>        robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#34;Starting in&#34;</span>)
+</span></span><span style="display:flex;"><span>        robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>set_font(delay_font)
+</span></span><span style="display:flex;"><span>        robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#8be9fd;font-style:italic">str</span>(delay))
+</span></span><span style="display:flex;"><span>        wait(<span style="color:#bd93f9">1000</span>)
+</span></span><span style="display:flex;"><span>        delay <span style="color:#ff79c6">-=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>    robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>clear()
+</span></span><span style="display:flex;"><span>    robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>set_font(delay_font)
+</span></span><span style="display:flex;"><span>    robot<span style="color:#ff79c6">.</span>screen<span style="color:#ff79c6">.</span>print(<span style="color:#f1fa8c">&#39;Go&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>        exec(<span style="color:#8be9fd;font-style:italic">open</span>(menu[menuIx][<span style="color:#bd93f9">0</span>],<span style="color:#f1fa8c">&#39;r&#39;</span>)<span style="color:#ff79c6">.</span>read())
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">except</span> OSError <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">raise</span> e
+</span></span></code></pre></div>
+
+    </main>
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+        <div class="container">
+            
+    <nav class="row">
+    <div class="col-6" style="text-align: left;">
+        
+        <h6>
+            <small>Previous</small><br/>
+            <a href="http://localhost:1313/8/vehicles/setup/">Setup</a>
+        </h6>
+        
+    </div>
+    <div class="col-6" style="text-align: right;">
+        
+        <h6>
+            <small>Next</small><br/>
+            <a href="http://localhost:1313/8/vehicles/runningyourcode/">Running your code</a>
+        </h6>
+        
+    </div>
+</nav>
+
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="http://localhost:1313/8//main.js"></script>
+</body>
+</html>

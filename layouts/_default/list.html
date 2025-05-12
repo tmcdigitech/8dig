@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="card text-bg-light mb-3" style="width: 18rem; float: right;">
+    <div class="card-header">
+        {{ .CurrentSection.Title }}
+    </div>
+    <div class="card-body">
+        <ol>
+            {{ $currentURL := .Permalink }}
+            {{ range (where .Site.RegularPages.ByWeight "Section" .Section ) }}
+                <li><a href="{{ .Permalink }}"{{ if eq .Permalink $currentURL }} style="font-weight: bold;"{{ end }}>{{ .Params.title | humanize | title }}</a></li>
+            {{ end }}
+        </ol>
+    </div>
+</div>
+
+ {{ .Content }}
+{{ end }}

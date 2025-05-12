@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    {{ partial "meta.html" . }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.jade.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/main.css">
+    <title>8 Digital Tech</title>
+</head>
+<body class="container">
+    <header>
+        {{ partial "nav.html" . }}
+        <hr/>
+        {{ block "header" . }}
+        {{ end }}
+    </header>
+    <main>
+        <aside>
+            In this section
+            <ol>
+        {{ range (where .Site.RegularPages.ByWeight "Section" .Section ) }}
+            <li><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a></li>
+        {{ end }}
+            </ol>
+        </aside>
+        {{ block "main" . }}
+        {{ end }}
+    </main>
+    <footer>
+        {{ block "footer" . }}
+        {{ end }}
+    </footer>
+</body>
+</html>

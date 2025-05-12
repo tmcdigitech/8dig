@@ -1,0 +1,19 @@
+<nav>
+    <div style="text-align: left;">
+        <h6>
+            <small>Previous</small>        
+            {{ with .Prev }}<br/>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h6>
+        {{ end }}
+    </div>
+    <h1>{{ .Title }}</h1>
+    <div style="text-align: right;">
+        <h6>
+            <small>Next</small>
+            {{ with .Next }}<br/>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h6>
+        {{ end }}
+    </div>
+</nav>
