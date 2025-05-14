@@ -2,6 +2,8 @@
 title: "📝 Obstacle Course 1"
 weight: 50
 ---
+- [Submission Template](ObstacleCourse.pptx)
+
 Your task is to program the robot to work its way through the obstacle course, from Start to Finish 1.
 
 <img src="obstacleCourse.jpg" alt="course map" style="max-height: 25em;">
