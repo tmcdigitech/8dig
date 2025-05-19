@@ -1,6 +1,7 @@
 ---
-title: "📝 Obstacle Course 1"
+title: "Obstacle Course 1"
 weight: 50
+type: assessment
 ---
 - [Submission Template](ObstacleCourse.pptx)
 

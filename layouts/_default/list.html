@@ -4,12 +4,14 @@
         {{ .CurrentSection.Title }}
     </div>
     <div class="card-body">
-        <ol>
-            {{ $currentURL := .Permalink }}
-            {{ range (where .Site.RegularPages.ByWeight "Section" .Section ) }}
-                <li><a href="{{ .Permalink }}"{{ if eq .Permalink $currentURL }} style="font-weight: bold;"{{ end }}>{{ .Params.title | humanize | title }}</a></li>
+        {{ with .Parent }}
+            <p><a href="{{ .Permalink }}" style="text-decoration: none;"><i class="bi bi-arrow-90deg-up"></i> {{ .Title }}</a></p>
+        {{ end }}
+        <ul>
+            {{ range .Pages }}
+                <li><a href="{{ .Permalink }}" style="text-decoration: none;">{{ .Params.title }}</a></li>
             {{ end }}
-        </ol>
+        </ul>
     </div>
 </div>
 
