@@ -56,5 +56,12 @@
       <guid>http://localhost:1313/8dig/vehicles/sensors/</guid>
       <description>&lt;p&gt;Having worked through the obstacle course, you&amp;rsquo;ll notice how fussy and annoying the robot is. Start the robot slightly forward or back of your mark and it&amp;rsquo;ll miss the turn. Get the starting angle slightly wrong and the robot can end up in the wrong place entirely. We can minimise this problem by introducing some &lt;strong&gt;sensors&lt;/strong&gt;. Sensors are ways the computer can find out about the world around it. Our robot is equipped with four sensors:&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Event loops</title>
+      <link>http://localhost:1313/8dig/vehicles/eventloop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/8dig/vehicles/eventloop/</guid>
+      <description>&lt;p&gt;Often, where the computer is reacting live to changes in an environment, we use an &lt;strong&gt;event loop&lt;/strong&gt; to organise our code. In these cases, there is some inital setup, and then we have a sequence of things we need to do, which we will repeat over and over for ever.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;eventLoop.png&#34; alt=&#34;A simple event loop in Scratch.&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In Python, a loop forever is a &lt;code&gt;while True:&lt;/code&gt; loop. Most of you would have seen them at work in your Microbit folio last year.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

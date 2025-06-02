@@ -20,6 +20,8 @@
   </url><url>
     <loc>http://localhost:1313/8dig/vehicles/sensors/</loc>
   </url><url>
+    <loc>http://localhost:1313/8dig/vehicles/eventloop/</loc>
+  </url><url>
     <loc>http://localhost:1313/8dig/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/8dig/</loc>
