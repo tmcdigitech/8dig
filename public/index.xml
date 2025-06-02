@@ -36,11 +36,25 @@
       <description>&lt;p&gt;In Visual Studio Code select &lt;code&gt;main.py&lt;/code&gt; from the &lt;strong&gt;File Explorer&lt;/strong&gt; on the left. At the top of the explorer click the new file icon (a document with a +) and name the file &lt;code&gt;obs1.py&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Enter this code:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;robot&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;setup(DRIVE_BASE)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;robot&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;straight(&lt;span style=&#34;color:#bd93f9&#34;&gt;100&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;robot&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;straight(&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;100&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Save your work (&lt;kbd&gt;Ctrl-S&lt;/kbd&gt; or &lt;mark&gt;File &amp;gt; Save&lt;/mark&gt; from the menu bar) and run the code with &lt;kbd&gt;F5&lt;/kbd&gt;. VSCode will automatically copy all the files in the project onto the robot and run the main.py file.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Sequence</title>
+      <link>http://localhost:1313/8dig/vehicles/sequence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/8dig/vehicles/sequence/</guid>
+      <description>&lt;p&gt;Computers are simple machines. They do not think. They mindlessly follow instructions, one after another, in the order they are given. This idea is called &lt;strong&gt;sequence&lt;/strong&gt;, and is the foundation of programming. Our job is to determine the correct sequence of instructions to give the computer so that it does what we want it to do.&lt;/p&gt;&#xA;&lt;p&gt;Many of you would have used Scratch, where you stick commands together.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;sequence.png&#34; alt=&#34;a sequence of commands in Scratch&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Obstacle Course 1</title>
       <link>http://localhost:1313/8dig/vehicles/obs1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/8dig/vehicles/obs1/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;ObstacleCourse.pptx&#34;&gt;Submission Template&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Your task is to program the robot to work its way through the obstacle course, from Start to Finish 1.&lt;/p&gt;&#xA;&lt;img src=&#34;obstacleCourse.jpg&#34; alt=&#34;course map&#34; style=&#34;max-height: 25em;&#34;&gt;&#xA;&lt;p&gt;You know how to make the robot move forwards, and how to make it turn on the spot, so getting through the obstacle course should be a matter of working out the sequence of moves and turns, and working out how far you need to move and turn each time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using sensors</title>
+      <link>http://localhost:1313/8dig/vehicles/sensors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/8dig/vehicles/sensors/</guid>
+      <description>&lt;p&gt;Having worked through the obstacle course, you&amp;rsquo;ll notice how fussy and annoying the robot is. Start the robot slightly forward or back of your mark and it&amp;rsquo;ll miss the turn. Get the starting angle slightly wrong and the robot can end up in the wrong place entirely. We can minimise this problem by introducing some &lt;strong&gt;sensors&lt;/strong&gt;. Sensors are ways the computer can find out about the world around it. Our robot is equipped with four sensors:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

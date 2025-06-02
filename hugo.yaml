@@ -10,6 +10,11 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    
+    parser:
+      attribute:
+        title: true
+        block: true
 
 page:
   nextPrevInSectionSortOrder: asc

@@ -14,7 +14,11 @@
   </url><url>
     <loc>http://localhost:1313/8dig/vehicles/moveandturn/</loc>
   </url><url>
+    <loc>http://localhost:1313/8dig/vehicles/sequence/</loc>
+  </url><url>
     <loc>http://localhost:1313/8dig/vehicles/obs1/</loc>
+  </url><url>
+    <loc>http://localhost:1313/8dig/vehicles/sensors/</loc>
   </url><url>
     <loc>http://localhost:1313/8dig/categories/</loc>
   </url><url>
