@@ -1,6 +1,8 @@
 ---
 title: Move and turn
 weight: 40
+params:
+    part: setup
 ---
 In Visual Studio Code select `main.py` from the **File Explorer** on the left. At the top of the explorer click the new file icon (a document with a +) and name the file `obs1.py`.
 

@@ -36,56 +36,94 @@
 
     </header>
     <main class="container">
-    <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
     
-      <li class="breadcrumb-item">
-        <a href="/8dig/">Home</a>
-      </li>
     
-      <li class="breadcrumb-item">
-        <a href="/8dig/vehicles/">Autonomous vehicles</a>
-      </li>
-    
-    <li class="breadcrumb-item active">
-      main.py
-    </li>
-  </ol>
-</nav>
-    
-<div class="card text-bg-light mt-0 mb-3 float-lg-end col-lg-4 col-xl-3" >
-    <div class="card-header">
-        Autonomous vehicles
-    </div>
-    <div class="card-body">
-        
-            <p><a href="http://localhost:1313/8dig/vehicles/" style="text-decoration: none;"><i class="bi bi-arrow-90deg-up"></i> Autonomous vehicles</a></p>
-        
-        <ul>
-            
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/setup/" style="text-decoration: none; ">Setup</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/mainpy/" style="text-decoration: none; font-weight: bold;">main.py</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/runningyourcode/" style="text-decoration: none; ">Running your code</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/moveandturn/" style="text-decoration: none; ">Move and turn</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/sequence/" style="text-decoration: none; ">Sequence</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/obs1/" style="text-decoration: none; ">Obstacle Course 1</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/sensors/" style="text-decoration: none; ">Using sensors</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/eventloop/" style="text-decoration: none; ">Event loops</a></li>
-            
-        </ul>
-    </div>
-</div>
-<h1 class="h4 m-0" style="color: var(--bs-gray);">Autonomous vehicles</h1>
-<h1 class="display-1">main.py</h1>
-<p>Delete all the code in <code>main.py</code>, replacing it with the code below:</p>
+        <div class="card text-bg-light mt-0 mb-3 float-lg-end col-lg-4 col-xl-3" >
+            <div class="card-header">
+                Autonomous vehicles
+            </div>
+            <div class="card-body">
+                
+                <ul class="timeline-list">
+                    
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/setup/" style="text-decoration: none; ">Setup</a>
+                            </div>
+                        </li>
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/mainpy/" style="text-decoration: none; font-weight: bold;">main.py</a>
+                            </div>
+                        </li>
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/runningyourcode/" style="text-decoration: none; ">Running your code</a>
+                            </div>
+                        </li>
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/moveandturn/" style="text-decoration: none; ">Move and turn</a>
+                            </div>
+                        </li>
+                    
+                </ul>
+                
+                <ul class="timeline-list">
+                    
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/sequence/" style="text-decoration: none; ">Sequence</a>
+                            </div>
+                        </li>
+                    
+                        <li class="assessment">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/obs1/" style="text-decoration: none; ">Obstacle Course 1</a>
+                            </div>
+                        </li>
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/sensors/" style="text-decoration: none; ">Using sensors</a>
+                            </div>
+                        </li>
+                    
+                        <li class="assessment">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/obs2/" style="text-decoration: none; ">Obstacle Course 2</a>
+                            </div>
+                        </li>
+                    
+                </ul>
+                
+                <ul class="timeline-list">
+                    
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/eventloop/" style="text-decoration: none; ">Event loops</a>
+                            </div>
+                        </li>
+                    
+                        <li class="assessment">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/ftl1/" style="text-decoration: none; ">Follow the Line 1</a>
+                            </div>
+                        </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+        <h1 class="h4 m-0" style="color: var(--bs-gray);">Autonomous vehicles</h1>
+        <h1 class="display-1">main.py</h1>
+        <p>Delete all the code in <code>main.py</code>, replacing it with the code below:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4">#!/bin/bash</span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">##############################################</span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4"># Runs script first through bash to remove</span>
@@ -476,7 +514,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">except</span> OSError <span style="color:#ff79c6">as</span> e:
 </span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">raise</span> e
 </span></span></code></pre></div>
-
+    
     </main>
     <footer class="footer mt-auto py-3 bg-body-tertiary">
         <div class="container">

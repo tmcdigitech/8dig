@@ -36,56 +36,94 @@
 
     </header>
     <main class="container">
-    <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
     
-      <li class="breadcrumb-item">
-        <a href="/8dig/">Home</a>
-      </li>
     
-      <li class="breadcrumb-item">
-        <a href="/8dig/vehicles/">Autonomous vehicles</a>
-      </li>
-    
-    <li class="breadcrumb-item active">
-      Using sensors
-    </li>
-  </ol>
-</nav>
-    
-<div class="card text-bg-light mt-0 mb-3 float-lg-end col-lg-4 col-xl-3" >
-    <div class="card-header">
-        Autonomous vehicles
-    </div>
-    <div class="card-body">
-        
-            <p><a href="http://localhost:1313/8dig/vehicles/" style="text-decoration: none;"><i class="bi bi-arrow-90deg-up"></i> Autonomous vehicles</a></p>
-        
-        <ul>
-            
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/setup/" style="text-decoration: none; ">Setup</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/mainpy/" style="text-decoration: none; ">main.py</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/runningyourcode/" style="text-decoration: none; ">Running your code</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/moveandturn/" style="text-decoration: none; ">Move and turn</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/sequence/" style="text-decoration: none; ">Sequence</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/obs1/" style="text-decoration: none; ">Obstacle Course 1</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/sensors/" style="text-decoration: none; font-weight: bold;">Using sensors</a></li>
-            
-                <li><a href="http://localhost:1313/8dig/vehicles/eventloop/" style="text-decoration: none; ">Event loops</a></li>
-            
-        </ul>
-    </div>
-</div>
-<h1 class="h4 m-0" style="color: var(--bs-gray);">Autonomous vehicles</h1>
-<h1 class="display-1">Using sensors</h1>
-<p>Having worked through the obstacle course, you&rsquo;ll notice how fussy and annoying the robot is. Start the robot slightly forward or back of your mark and it&rsquo;ll miss the turn. Get the starting angle slightly wrong and the robot can end up in the wrong place entirely. We can minimise this problem by introducing some <strong>sensors</strong>. Sensors are ways the computer can find out about the world around it. Our robot is equipped with four sensors:</p>
+        <div class="card text-bg-light mt-0 mb-3 float-lg-end col-lg-4 col-xl-3" >
+            <div class="card-header">
+                Autonomous vehicles
+            </div>
+            <div class="card-body">
+                
+                <ul class="timeline-list">
+                    
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/setup/" style="text-decoration: none; ">Setup</a>
+                            </div>
+                        </li>
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/mainpy/" style="text-decoration: none; ">main.py</a>
+                            </div>
+                        </li>
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/runningyourcode/" style="text-decoration: none; ">Running your code</a>
+                            </div>
+                        </li>
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/moveandturn/" style="text-decoration: none; ">Move and turn</a>
+                            </div>
+                        </li>
+                    
+                </ul>
+                
+                <ul class="timeline-list">
+                    
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/sequence/" style="text-decoration: none; ">Sequence</a>
+                            </div>
+                        </li>
+                    
+                        <li class="assessment">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/obs1/" style="text-decoration: none; ">Obstacle Course 1</a>
+                            </div>
+                        </li>
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/sensors/" style="text-decoration: none; font-weight: bold;">Using sensors</a>
+                            </div>
+                        </li>
+                    
+                        <li class="assessment">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/obs2/" style="text-decoration: none; ">Obstacle Course 2</a>
+                            </div>
+                        </li>
+                    
+                </ul>
+                
+                <ul class="timeline-list">
+                    
+                    
+                        <li class="">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/eventloop/" style="text-decoration: none; ">Event loops</a>
+                            </div>
+                        </li>
+                    
+                        <li class="assessment">
+                            <div class="content">
+                                <a href="http://localhost:1313/8dig/vehicles/ftl1/" style="text-decoration: none; ">Follow the Line 1</a>
+                            </div>
+                        </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+        <h1 class="h4 m-0" style="color: var(--bs-gray);">Autonomous vehicles</h1>
+        <h1 class="display-1">Using sensors</h1>
+        <p>Having worked through the obstacle course, you&rsquo;ll notice how fussy and annoying the robot is. Start the robot slightly forward or back of your mark and it&rsquo;ll miss the turn. Get the starting angle slightly wrong and the robot can end up in the wrong place entirely. We can minimise this problem by introducing some <strong>sensors</strong>. Sensors are ways the computer can find out about the world around it. Our robot is equipped with four sensors:</p>
 <ul>
 <li>two color sensors (note the American spelling of colour here&hellip;), mounted on the front left and right facing the ground;</li>
 <li>a touch sensor, basically a big cross shaped button, in the middle; and</li>
@@ -161,7 +199,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
-
+    
     </main>
     <footer class="footer mt-auto py-3 bg-body-tertiary">
         <div class="container">
@@ -179,7 +217,7 @@
         
         <h6>
             <small>Next</small><br/>
-            <a href="http://localhost:1313/8dig/vehicles/eventloop/">Event loops</a>
+            <a href="http://localhost:1313/8dig/vehicles/obs2/">Obstacle Course 2</a>
         </h6>
         
     </div>

@@ -1,6 +1,8 @@
 ---
 title: Running your code
 weight: 30
+params:
+    part: setup
 ---
 
 You can run code on your robot by pressing <kbd>F5</kbd> or choosing <mark>Run > Start debugging</mark> from the menu bar. After a short delay, your robot will display a menu. Use the buttons on the robot to make your selection:

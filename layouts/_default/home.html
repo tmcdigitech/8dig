@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div style="column-count: 2;">
+{{- range .Pages.ByWeight -}}
+<div style="break-inside: avoid-column;">
+    <h2>{{ .Title }}</h2>
+    {{ range .Param "parts" }}
+    <ul class="timeline-list">
+        {{ range (where $.Site.RegularPages.ByWeight "Params.part" . ) }}
+            <li class="{{ if .Param "assessment" }}assessment{{ end }}">
+                <div class="content">
+                    <a href="{{ .Permalink }}" style="text-decoration: none;">{{ .Params.title }}</a>
+                </div>
+            </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>
+{{- end -}}
+</div>
+{{ .Content }}
+{{ end }}

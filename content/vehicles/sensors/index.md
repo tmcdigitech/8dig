@@ -1,5 +1,7 @@
 ---
 title: Using sensors
+params:
+    part: obs
 weight: 70
 ---
 

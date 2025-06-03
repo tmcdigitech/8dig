@@ -57,11 +57,25 @@
       <description>&lt;p&gt;Having worked through the obstacle course, you&amp;rsquo;ll notice how fussy and annoying the robot is. Start the robot slightly forward or back of your mark and it&amp;rsquo;ll miss the turn. Get the starting angle slightly wrong and the robot can end up in the wrong place entirely. We can minimise this problem by introducing some &lt;strong&gt;sensors&lt;/strong&gt;. Sensors are ways the computer can find out about the world around it. Our robot is equipped with four sensors:&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Obstacle Course 2</title>
+      <link>http://localhost:1313/8dig/vehicles/obs2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/8dig/vehicles/obs2/</guid>
+      <description>&lt;p&gt;In this part you will be adding to the file you started in &lt;a href=&#34;http://localhost:1313/8dig/vehicles/obs1/&#34;&gt;Obstacle Course 1&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;img src=&#34;obstacleCourse.jpg&#34; alt=&#34;course map&#34; style=&#34;max-height: 25em;&#34;&gt;&#xA;&lt;p&gt;You know how to make the robot move forwards, and how to make it turn on the spot, so getting through the obstacle course should be a matter of working out the sequence of moves and turns, and working out how far you need to move and turn each time.&lt;/p&gt;&#xA;&lt;p&gt;Use the &lt;a href=&#34;ObstacleCourse.pptx&#34;&gt;Submission Template&lt;/a&gt; to build your portfolio of evidence. You will need to include:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Event loops</title>
       <link>http://localhost:1313/8dig/vehicles/eventloop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/8dig/vehicles/eventloop/</guid>
       <description>&lt;p&gt;Often, where the computer is reacting live to changes in an environment, we use an &lt;strong&gt;event loop&lt;/strong&gt; to organise our code. In these cases, there is some inital setup, and then we have a sequence of things we need to do, which we will repeat over and over for ever.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;eventLoop.png&#34; alt=&#34;A simple event loop in Scratch.&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In Python, a loop forever is a &lt;code&gt;while True:&lt;/code&gt; loop. Most of you would have seen them at work in your Microbit folio last year.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Follow the Line 1</title>
+      <link>http://localhost:1313/8dig/vehicles/ftl1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/8dig/vehicles/ftl1/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;FollowTheLine.pptx&#34;&gt;Submission Template&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Using the color sensor, make your robot drive along the carpet until it reaches a white line.&lt;/p&gt;&#xA;&lt;p&gt;Use the &lt;a href=&#34;FollowTheLine.pptx&#34;&gt;Submission Template&lt;/a&gt; to build your portfolio of evidence. You will need to include:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;a flowchart which lays out the sequence of steps the robot will go through to get through the course,&lt;/li&gt;&#xA;&lt;li&gt;the code you write which makes the robot do this,&lt;/li&gt;&#xA;&lt;li&gt;a video (taken with your laptop) of the robot successfully navigating the course.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Keep this file, as you&amp;rsquo;ll use it again for subsequent parts of the Follow the Line task before uploading it to SEQTA.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -23,3 +23,7 @@ page:
 caches:
   images:
     dir: :cacheDir/images
+
+mainSections:
+- vehicles
+- games

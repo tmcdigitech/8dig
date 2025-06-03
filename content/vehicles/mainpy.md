@@ -1,6 +1,8 @@
 ---
 title: main.py
 weight: 20
+params:
+    part: setup
 ---
 
 Delete all the code in `main.py`, replacing it with the code below:

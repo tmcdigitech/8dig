@@ -5,3 +5,64 @@ main.container {
 main img {
     max-width: 100%;
 }
+
+.timeline-list {
+	list-style: none;
+	/* border-left: 2px solid #ccc; */
+	padding-bottom: 0.5em;
+	position: relative;
+	max-width:700px;
+	/* margin:0 auto; */
+ 
+	&:before {
+		content: "";
+		border-left: 0.2em solid #ddd;
+		left: 0em;
+		height: calc(100% - 1.8em);
+		position: absolute;
+		padding: 1em 0;
+		top: 0.6em;
+	}
+}
+
+.t-block-teal {
+	background:#02aa9d;
+}
+.t-block-teal h2 {
+	color:#fff;
+}
+.t-block-teal h3 {
+	color:#034944;
+}
+.t-block-teal p {
+	color:#034944;
+}
+
+.timeline-list li {
+
+	margin:0 0 0em 0;
+	padding:0 0em 0em 0em;
+    position: relative;
+
+}
+.timeline-list li:before {
+
+	content: "";
+	position: absolute;
+	top: 0.6em;
+	left: -2em;
+	width: 1em;
+	height: 0.2em;
+	border-radius: 0;
+	background: none repeat scroll 0% 0% #ddd;
+	border: 0;
+}
+
+.timeline-list li.assessment:before {
+
+	top: 0.6em;
+	height: 0.2em;
+	background: none repeat scroll 0% 0% #000;
+	border-left: 0.2em solid #ddd;
+	border-right: 0;
+}

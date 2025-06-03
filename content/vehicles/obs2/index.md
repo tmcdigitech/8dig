@@ -1,13 +1,11 @@
 ---
-title: "Obstacle Course 1"
-weight: 60
+title: "Obstacle Course 2"
+weight: 80
 params:
     part: obs
     assessment: true
 ---
-- [Submission Template](ObstacleCourse.pptx)
-
-Your task is to program the robot to work its way through the obstacle course, from Start to Finish 1.
+In this part you will be adding to the file you started in [Obstacle Course 1]({{% ref "/vehicles/obs1" %}}).
 
 <img src="obstacleCourse.jpg" alt="course map" style="max-height: 25em;">
 

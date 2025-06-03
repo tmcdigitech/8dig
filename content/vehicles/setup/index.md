@@ -1,6 +1,8 @@
 ---
 title: Setup
 weight: 10
+params:
+    part: setup
 ---
 1.  From the Company Portal, install Visual Studio Code.
 

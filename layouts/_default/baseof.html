@@ -14,8 +14,30 @@
         {{ partial "navbar.html" . }}
     </header>
     <main class="container">
-    {{ partial "breadcrumb.html" . }}
+    <!-- {{ partial "breadcrumb.html" . }} -->
     {{ block "main" . }}
+        <div class="card text-bg-light mt-0 mb-3 float-lg-end col-lg-4 col-xl-3" >
+            <div class="card-header">
+                {{ .CurrentSection.Title }}
+            </div>
+            <div class="card-body">
+                {{ range .Param "parts" }}
+                <ul class="timeline-list">
+                    {{ $currentURL := $.Permalink }}
+                    {{ range (where $.Site.RegularPages.ByWeight "Params.part" . ) }}
+                        <li class="{{ if .Param "assessment" }}assessment{{ end }}">
+                            <div class="content">
+                                <a href="{{ .Permalink }}" style="text-decoration: none; {{ if eq .Permalink $currentURL }}font-weight: bold;{{ end }}">{{ .Params.title }}</a>
+                            </div>
+                        </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+        </div>
+        <h1 class="h4 m-0" style="color: var(--bs-gray);">{{ .CurrentSection.Title }}</h1>
+        <h1 class="display-1">{{ .Title }}</h1>
+        {{ .Content }}
     {{ end }}
     </main>
     <footer class="footer mt-auto py-3 bg-body-tertiary">

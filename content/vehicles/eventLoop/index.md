@@ -1,6 +1,8 @@
 ---
 title: Event loops
-weight: 110
+weight: 3010
+params:
+    part: ftl
 ---
 
 Often, where the computer is reacting live to changes in an environment, we use an **event loop** to organise our code. In these cases, there is some inital setup, and then we have a sequence of things we need to do, which we will repeat over and over for ever.

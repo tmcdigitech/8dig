@@ -1,8 +1,9 @@
-{{ define "main" }}
+{{ define "moron" }}
 <div class="card text-bg-light mb-3" style="width: 18rem; float: right;">
     <div class="card-header">
         {{ .CurrentSection.Title }}
     </div>
+    hello
     <div class="card-body">
         {{ with .Parent }}
             <p><a href="{{ .Permalink }}" style="text-decoration: none;"><i class="bi bi-arrow-90deg-up"></i> {{ .Title }}</a></p>
@@ -15,5 +16,5 @@
     </div>
 </div>
 
- {{ .Content }}
+{{ .Content }}
 {{ end }}
